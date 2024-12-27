@@ -109,7 +109,7 @@ Bir pencere açılacak ve orada bir rakam çizebilir ve tahmini görebilirsiniz.
 
 CNN modeli, batch normalization ve ReLU aktivasyonu ile iki konvolusyonel katmandan oluşur, ardından max pooling kullanır. Bu, dropout düzenlemesi ve batch normalization ile iki tam bağlantılı katmanla takip edilir ve son olarak, rakam tahminleri için 10 birimde bir çıkış katmanı vardır.
 
-##Modeli Eğitme
+## Modeli Eğitme
 
 `model_creation.py` skripti, Adadelta optimize edici ve adim öğrenme oranı planlayıcısı kullanarak modeli 15 epoch boyunca eğitir. Genelleme iyileştirmek için rastgele afin dönüşümleri gibi veri artırma teknikleri kullanılır.
 
