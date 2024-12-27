@@ -1,3 +1,4 @@
+# English
 # Handwritten Digit Predictor
 
 Welcome to the Handwritten Digit Predictor! This project allows you to draw a handwritten digit on a canvas and see how a trained Convolutional Neural Network (CNN) model predicts it. It's a fun and interactive way to explore the power of deep learning in recognizing handwritten digits.
@@ -64,3 +65,64 @@ Thanks to the MNIST dataset for providing the handwritten digits. Built with PyT
 - The predictor will work on CPU if GPU is not available.
 
 We hope you find this project insightful and fun to use!
+
+# Türkçe
+
+## El Yazısı Rakam Tahmin Edici
+
+El Yazısı Rakam Tahmin Edici'ye hoş geldiniz! Bu proje, bir çizede el yazısı bir rakam çizmenizi ve eğitilmiş Bir Konvolusyonel Sinir Ağı (CNN) modelinin nasıl tahmin ettiği görmek için size izin verir. Bu, derin öğrenme gücünü el yazısı rakamlarını tanıma konusunda keşfetmek için eğlenceli ve etkileşimli bir yoldur.
+
+## Önkoşullar
+
+Bu projeyi kullanmak için aşağıdaki yazılımlar ve kütüphanelerin yüklü olduğuna emin olun:
+
+Python 3.x
+tkinter (Python ile birlikte gelir)
+PIL (Pillow)
+PyTorch
+torchvision
+Yükleme
+
+## Gerekli kütüphaneleri pip aracılığıyla yükleyin:
+
+`pip install torch torchvision pillow`
+
+Kullanım
+
+## Modeli Eğitme
+
+Aşağıdaki komutu çalıştırarak MNIST veri seti üzerinde CNN'yi eğitini:
+
+`python model_creation.py`
+
+Bu, model ağırlıklarını mnist_cnn_improved.pth olarak kaydedecektir.
+
+## Tahmin Ediciyi Çalıştırma
+
+GUI'yi başlatmak için aşağıdaki komutu çalıştırın:
+
+`python Handwritten_Digit_Predictor.py`
+
+Bir pencere açılacak ve orada bir rakam çizebilir ve tahmini görebilirsiniz.
+
+## Model Mimarisi
+
+CNN modeli, batch normalization ve ReLU aktivasyonu ile iki konvolusyonel katmandan oluşur, ardından max pooling kullanır. Bu, dropout düzenlemesi ve batch normalization ile iki tam bağlantılı katmanla takip edilir ve son olarak, rakam tahminleri için 10 birimde bir çıkış katmanı vardır.
+
+##Modeli Eğitme
+
+`model_creation.py` skripti, Adadelta optimize edici ve adim öğrenme oranı planlayıcısı kullanarak modeli 15 epoch boyunca eğitir. Genelleme iyileştirmek için rastgele afin dönüşümleri gibi veri artırma teknikleri kullanılır.
+
+## Tahmin Ediciyi Çalıştırma
+
+Tahmin ediciyi çalıştırırken, çizilen resim ters çevrilir, 28x28 piksel boyutuna.resize edilir ve normalize edilir, ardından model için tahmin için kullanılır. GUI, her rakam için olasılıklarıProgressBar'larla gösterir.
+
+Teşekkürler
+
+MNIST veri seti için el yazısı rakamlarını sağlama için teşekkür ederiz. PyTorch ve Tkinter ile oluşturuldu.
+
+## Notlar
+
+Model, GPU mevcutse daha hızlı eğitilecektir. Skript, mevcut olduğunda otomatik olarak kullanır.
+Tahmin edici, GPU yoksa CPU'da çalışır.
+Bu projeyi faydalı ve eğlenceli bulmanız umudumuz!
